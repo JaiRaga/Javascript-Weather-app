@@ -21,11 +21,21 @@ document.querySelector('#submit').addEventListener("click", (address) => {
             return response.json()
          })
          .then(data => {
-            console.log(data.currently);
-            document.querySelector(".degree").innerHTML = data.currently.apparentTemperature
-            document.querySelector(".description").innerHTML = data.currently.summary
+            // console.log(data);
+            const {temperature, summary, icon} = data.currently;
+            document.querySelector(".degree").innerHTML = temperature+" f"
+            document.querySelector(".description").innerHTML = summary
+
+            setIcon(icon, document.querySelector(".icon"))
          })
      })
+
+     const setIcon = (icon, iconID) => {
+         const skycons = new Skycons({color: 'white'})
+         const currentIcon = icon.replace(/-/g, "_").toUpperCase()
+         skycons.play()
+         return skycons.set(iconID, Skycons[currentIcon])
+     }
 })
 
 

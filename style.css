@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    opacity: 0.9;
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+    height: 100vh;
+}
+
+h1 {
+    padding-top: 40px; 
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.location-zone {
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.location-zone:focus {
+    opacity: 1;
+    color: darkblue;
+}
+
+#submit {
+    font-size: 1.5em;
+    opacity: 0.8;
+}
+
+#submit:hover {
+    background: black;
+    color: white;
+    opacity: 0.5;
+}
+
+.degree {
+    padding-top: 7%;
+    margin: 0 auto;
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+.icon {
+    margin: 0 auto;
+}
+
+.description {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 20px;
+    opacity: 0.7;
+}
